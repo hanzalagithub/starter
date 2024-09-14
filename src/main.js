@@ -3,7 +3,7 @@ import Stripe from 'stripe';
 
 const stripe = new Stripe(process.env.STRIPE_TEST_SECRET); // Use your test secret key here
 
-export default async ({ req, res, log, error }) => {
+export default async ({ req, res, error }) => {
   // Initialize Appwrite client
   const client = new Client()
     .setEndpoint(process.env.APPWRITE_FUNCTION_API_ENDPOINT)
